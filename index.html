@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="w-75 mx-auto">
+        <h3 class="py-3 fw-bolder">Product Managment System</h3>
+
+        <label for="productNameInput">productName:</label>
+        <input type="text" oninput="validationProduct()" class="mb-2 form-control" id="productNameInput">
+
+        <label for="productPriceInput">productPrice:</label>
+        <input type="number" class="mb-2 form-control" id="productPriceInput">
+
+        <label for="productCategoryInput">productCategory:</label>
+        <input type="text" class="mb-2 form-control" id="productCategoryInput">
+
+        <label for="productDescriptionInput">productDescription:</label>
+        <textarea name="text" class="form-control mb-2" id="productDescriptionInput"></textarea>
+        <button id="addBtn" onclick="addProduct()" class="btn btn-outline-info">Add Product</button>
+        <button id="updateBtn" onclick="updateProduct();" class="btn d-none btn-outline-primary">update Product</button>
+    </div>
+
+
+
+    <div class="w-75 mx-auto p-4">
+        <label for="search">search: </label>
+        <input oninput="searchProducts()" type="text" name="" placeholder="search by name" class="form-control"
+            id="search">
+    </div>
+
+    <table class="table w-75 mx-auto text-center">
+        <thead>
+            <th>Index</th>
+            <th>ProductName</th>
+            <th>ProductPrice</th>
+            <th>ProductCategory</th>
+            <th>ProductDescription</th>
+            <th>update</th>
+            <th>delete</th>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
