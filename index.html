@@ -13,16 +13,17 @@
         <h3 class="py-3 fw-bolder">Product Managment System</h3>
 
         <label for="productNameInput">productName:</label>
-        <input type="text" oninput="validationProduct()" class="mb-2 form-control" id="productNameInput">
+        <input type="text" oninput="validationProductName()" class="mb-2 form-control" id="productNameInput">
 
         <label for="productPriceInput">productPrice:</label>
-        <input type="number" class="mb-2 form-control" id="productPriceInput">
+        <input type="number" oninput="validationProductPrice()" class="mb-2 form-control" id="productPriceInput">
 
         <label for="productCategoryInput">productCategory:</label>
-        <input type="text" class="mb-2 form-control" id="productCategoryInput">
+        <input type="text" oninput="validationProductCategory()" class="mb-2 form-control" id="productCategoryInput">
 
         <label for="productDescriptionInput">productDescription:</label>
-        <textarea name="text" class="form-control mb-2" id="productDescriptionInput"></textarea>
+        <textarea name="text" oninput="validationProductDescription()" class="form-control mb-2"
+            id="productDescriptionInput"></textarea>
         <button id="addBtn" onclick="addProduct()" class="btn btn-outline-info">Add Product</button>
         <button id="updateBtn" onclick="updateProduct();" class="btn d-none btn-outline-primary">update Product</button>
     </div>

@@ -122,10 +122,10 @@ function updateProduct() {
   addBtn.classList.replace("d-none", "d-inline-block");
 }
 
-function validationProduct() {
+//======================  function to validate product name ======================//
+function validationProductName() {
   var regex = /^[A-Z][a-z]{3,6}$/;
-  console.log(productNameInput.value);
-  console.log(regex.test(productNameInput.value));
+
   if (regex.test(productNameInput.value) == true) {
     if (productNameInput.classList.contains("is-invalid")) {
       productNameInput.classList.replace("is-invalid", "is-valid");
@@ -133,6 +133,51 @@ function validationProduct() {
     }
   } else {
     productNameInput.classList.add("is-invalid");
+    return false;
+  }
+}
+
+//======================  function to validate product price ======================//
+function validationProductPrice() {
+  var regex = /^[1-9][0-9]{1,5}$/;
+
+  if (regex.test(productPriceInput.value) == true) {
+    if (productPriceInput.classList.contains("is-invalid")) {
+      productPriceInput.classList.replace("is-invalid", "is-valid");
+      return true;
+    }
+  } else {
+    productPriceInput.classList.add("is-invalid");
+    return false;
+  }
+}
+
+//======================  function to validate product category ======================//
+function validationProductCategory() {
+  var regex = /^[a-z]{3,12}$/;
+
+  if (regex.test(productCategoryInput.value) == true) {
+    if (productCategoryInput.classList.contains("is-invalid")) {
+      productCategoryInput.classList.replace("is-invalid", "is-valid");
+      return true;
+    }
+  } else {
+    productCategoryInput.classList.add("is-invalid");
+    return false;
+  }
+}
+
+//======================  function to validate product description ======================//
+function validationProductDescription() {
+  var regex = /^[A-Z]?[a-z]{10,}[0-9]{1,}$/;
+
+  if (regex.test(productDescriptionInput.value) == true) {
+    if (productDescriptionInput.classList.contains("is-invalid")) {
+      productDescriptionInput.classList.replace("is-invalid", "is-valid");
+      return true;
+    }
+  } else {
+    productDescriptionInput.classList.add("is-invalid");
     return false;
   }
 }
